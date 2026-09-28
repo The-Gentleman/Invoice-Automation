@@ -7,6 +7,8 @@ invoice_path = Path(r"C:\Users\zraja\OneDrive - Signant Health\Documents\pythons
 
 with pdfplumber.open(invoice_path) as pdf:
    # get everything in "Description into a list"
+      table = pdf.pages[0].extract_tables()
+      pprint(table)
     
     
    
